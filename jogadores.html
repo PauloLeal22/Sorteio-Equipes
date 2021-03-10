@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/futebol.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <title>MySquad | Jogadores</title>
+</head>
+<body onload="paginaJogadores()">
+    <div class="container">
+        <header>
+            <input type="checkbox" id="menu">
+                    <label class="menu" for="menu"><i class="fa fa-navicon" style="font-size:36px"></i>
+            </label>
+            <div class="img-menu">
+                <img src="assets/images/logo.png" alt="Logo">
+            </div>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">Home</a></li> 
+                    <li class="nav-item"><a href="jogadores.html">Jogadores</a></li>
+                    <li class="nav-item"><a href="cronometro.html">Cronômetro</a></li>
+                </ul> 
+            </div>
+        </header> <!-- FIM HEADER -->
+
+        <section class="section-jogadores" id="section-jogadores">
+            <div class="titulo-jogadores">
+                <h1>Aqui você pode adicionar quantos jogadores desejar!</h1>
+                <div class="input-jogadores">
+                    <input type="text" name="txtjogador" id="txtjogador" placeholder="Nome do perna de pau">
+                    <input type="button" value="+" name="btnjogador" id="btnjogador">
+                </div>
+            </div>
+
+            <div class="lista-jogadores" id="lista-jogadores">
+                <div class="titulo-lista">
+                    <h1 id="titulo-lista-jogadores">Ainda não existem jogadores</h1>
+                    <img src="assets/images/chuteira.png" alt="Chuteira" id="chuteira">
+                </div>
+                
+            </div>
+            <div class="area-escalar" id="area-escalar">
+                <input type="button" value="Escalar" id="btnescalar">
+            </div>
+            
+        </section> <!-- FIM SECTION -->
+
+        <!-- Alerta para remover o jogador -->
+            <div class="alerta" id="alerta">
+                <div class="titulo-alerta">
+                    <div class="label-alerta">
+                        <h1>ALERTA</h1>
+                    </div>
+                </div> 
+                <div class="conteudo-alerta">
+                    <img src="assets/images/cartao-vermelho.png" alt="Alerta">
+                    <h1>Não quer levar o parça para o fut?</h1>
+                    <input type="text" id="txtexclusao" placeholder="Então digite o nome dele"><br>
+                    <input type="button" value="Confirmar" id="btnexclusao">
+                </div>               
+            </div>
+
+            <!-- Alerta para campos sem texto -->
+            <div class="alerta" id="alerta2">
+                <div class="titulo-alerta">
+                    <div class="label-alerta">
+                        <h1>ALERTA</h1>
+                    </div>
+                </div> 
+                <div class="conteudo-alerta">
+                    <img src="assets/images/cartao-amarelo.png" alt="Alerta">
+                    <h1>Preencha o campo necessário!</h1>
+                    <input type="button" value="Confirmar" id="btnconfirmar">
+                </div>               
+            </div>
+
+            <div class="alerta" id="alerta3">
+                <div class="titulo-alerta">
+                    <div class="label-alerta">
+                        <h1>ALERTA</h1>
+                    </div>
+                </div> 
+                <div class="conteudo-alerta">
+                    <img src="assets/images/bandeira.png" alt="Alerta">
+                    <h1>Ele foi para o chuveiro mais cedo!</h1>
+                    <input type="button" value="Confirmar" id="btnconfirmar2">
+                </div>               
+            </div>
+
+            <section id="area-times">
+                <div class="titulo-jogadores">
+                    <label for="cbox"><h1>É aqui que a mágica acontece!</h1></label>
+                    <select name="numeroJogadores" id="numeroJogadores">
+                        <option value="0">Jogadores por time</option>
+                        <option value="5">5 jogadores</option>
+                    </select>
+                    <input type="button" value="Sortear" id="btnsorteio">
+                </div>
+    
+                <div class="conteudo-times">
+                    <div class="card-time" id="card-time1">
+                        <div class="titulo-card-time">
+                            <h1>Time 1</h1>
+                        </div>
+                        <div class="descricao-card-time">
+                            <h1 id="j1"></h1>
+                            <h1 id="j2"></h1>
+                            <h1 id="j3"></h1>
+                            <h1 id="j4"></h1>
+                            <h1 id="j5"></h1>
+                        </div>
+                    </div>
+
+                    <div class="card-time" id="card-time2">
+                        <div class="titulo-card-time">
+                            <h1>Time 2</h1>
+                        </div>
+                        <div class="descricao-card-time">
+                            <h1 id="j6"></h1>
+                            <h1 id="j7"></h1>
+                            <h1 id="j8"></h1>
+                            <h1 id="j9"></h1>
+                            <h1 id="j10"></h1>
+                        </div>
+                    </div>
+
+                    <div class="card-time" id="card-time3">
+                        <div class="titulo-card-time">
+                            <h1>Time 3</h1>
+                        </div>
+                        <div class="descricao-card-time">
+                            <h1 id="j11"></h1>
+                            <h1 id="j12"></h1>
+                            <h1 id="j13"></h1>
+                            <h1 id="j14"></h1>
+                            <h1 id="j15"></h1>
+                        </div>
+                    </div>
+
+                    <div class="card-time" id="card-time4">
+                        <div class="titulo-card-time">
+                            <h1>Time 4</h1>
+                        </div>
+                        <div class="descricao-card-time">
+                            <h1 id="j16"></h1>
+                            <h1 id="j17"></h1>
+                            <h1 id="j18"></h1>
+                            <h1 id="j19"></h1>
+                            <h1 id="j20"></h1>
+                        </div>
+                    </div>
+
+                    <div class="card-time" id="card-time5">
+                        <div class="titulo-card-time">
+                            <h1>Time 5</h1>
+                        </div>
+                        <div class="descricao-card-time">
+                            <h1 id="j21"></h1>
+                            <h1 id="j22"></h1>
+                            <h1 id="j23"></h1>
+                            <h1 id="j24"></h1>
+                            <h1 id="j25"></h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <footer>
+            <h3>&copy; PauloLeal</h3>
+        </footer>
+    </div><!-- FIM CONTAINER -->
+
+    <script src="script.js"></script>
+</body>
+</html>
