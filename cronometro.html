@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/futebol.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <title>MySquad | Cronômetro</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <input type="checkbox" id="menu">
+                    <label class="menu" for="menu"><i class="fa fa-navicon" style="font-size:36px"></i>
+            </label>
+            <div class="img-menu">
+                <img src="assets/images/logo.png" alt="Logo">
+            </div>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">Home</a></li> 
+                    <li class="nav-item"><a href="jogadores.html">Jogadores</a></li>
+                    <li class="nav-item"><a href="cronometro.html">Cronômetro</a></li>
+                </ul> 
+            </div>
+        </header> <!-- FIM HEADER -->
+
+        <div class="section-cronometro" id="section-cronometro">
+            <h1>Tempo da partida (minutos)</h1>
+            <input type="number" name="tempo" id="tempo" min="0">
+            <form name="form_main" class="form-cronometro">
+                <div class="cronometro">
+                  <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+                </div>
+              
+                <br />
+              
+                <div class="botoes-cronometro">
+                    <button type="button" name="start" id="start" class="btn-cronometro"><img src="assets/images/play.png" alt="pausar"></button>
+                    <button type="button" name="pause" id="pause" class="btn-cronometro"><img src="assets/images/pausa.png" alt="pausar"></button>
+                    <button type="button" name="reset" id="reset" class="btn-cronometro"><img src="assets/images/reset.png" alt="reiniciar"></button>
+                </div>
+                <audio src="assets/images/apito.mpeg" id="apito"></audio>
+            </form>
+        </div>
+
+        <div class="alerta" id="alerta4">
+            <div class="titulo-alerta">
+                <div class="label-alerta">
+                    <h1>FIM DE JOGO</h1>
+                </div>
+            </div> 
+            <div class="conteudo-alerta">
+                <img src="assets/images/juiz.png" alt="Alerta">
+                <h1>O juiz decidiu não dar acréscimo!</h1>
+                <input type="button" value="Confirmar" id="btnconfirmar2" onclick="fecharAlerta()">
+            </div>               
+        </div>        
+    </div>
+
+    <script src="script_cronometro.js"></script>
+</body>
+</html>
